@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muthupalani R - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .section-content img {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-picture">
+            <img src="muthu.jpg" alt="Profile Picture">
+        </div>
+        <div class="header-content">
+            <h1>Muthupalani R</h1>
+            <p>Artificial Intelligence and Data Science Specialist</p>
+            <p>ML Engineer</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="certificate.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="project.html">Projects</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="about" class="section about">
+            <div class="section-content">
+                <img src="about-image.jpg" alt="About Me Image">
+                <div class="text-content">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Muthupalani R, an aspiring Artificial Intelligence and Data Science professional from Coimbatore, India. With a passion for technology and problem-solving, I specialize in Python development, machine learning, and MLOps. My goal is to leverage AI to solve complex problems, improve business processes, and make data-driven decisions. I am constantly learning and exploring new technologies to stay at the forefront of the industry.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section education">
+            <div class="section-content">
+                <div class="text-content">
+                    <h2>Education</h2>
+                    <p>I am currently pursuing a B.Tech in Artificial Intelligence and Data Science at Karpagam College of Engineering, Coimbatore, with a CGPA of 8.30. My academic journey has equipped me with a strong foundation in AI and data science, along with hands-on experience in various projects and internships.</p>
+                </div>
+                <img src="education-image.jpg" alt="Education Image">
+            </div>
+        </section>
+
+        <section id="certifications" class="section certifications">
+            <div class="section-content">
+                <img src="certifications-image.jpg" alt="Certifications Image">
+                <div class="text-content">
+                    <h2>Certifications</h2>
+                    <ul>
+                        <li><strong>Machine Learning Using Python</strong> - Free Code Camp | Online <br><em>(September 2023)</em> - Developed proficiency in Machine Learning algorithms using Python libraries like Scikit-Learn.</li>
+                        <li><strong>Introduction to Automation</strong> - UI Path | Online <br><em>(September 2023)</em> - Acquired foundational knowledge of automation principles using UIPath tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="section-content">
+                <div class="text-content">
+                    <h2>Skills</h2>
+                    <p>Over the years, I have developed a diverse skill set in programming languages, tools, and frameworks that are essential for AI and data science:</p>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, C, R programming, Java</li>
+                        <li><strong>Databases:</strong> MySQL</li>
+                        <li><strong>Tools:</strong> GitHub, Docker, Google Colab</li>
+                        <li><strong>ML/DL Frameworks:</strong> Numpy, Pandas, Matplotlib, Scikit-learn</li>
+                    </ul>
+                </div>
+                <img src="skills-image.jpg" alt="Skills Image">
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="section-content">
+                <img src="experience-image.jpg" alt="Experience Image">
+                <div class="text-content">
+                    <h2>Experience</h2>
+                    <p><strong>Intern at OCTANET</strong> <br><em>September 2023 – October 2023</em> - Gained experience in Python development, HTML, CSS, and database management. Worked on various projects, honing my skills in web development and data processing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="section-content">
+                <div class="text-content">
+                    <h2>Projects</h2>
+                    <p>Here are some of the projects I have worked on:</p>
+                    <ul>
+                        <li><strong>AI-Based Tool for Preliminary Diagnosis of Dermatological Manifestation</strong> <br>Developed an AI-powered tool using Python, Django, and React to assist in the preliminary diagnosis of dermatological conditions.</li>
+                        <li><strong>MLOPS for Predictive Maintenance</strong> <br>Led the MLOps implementation for wine quality prediction, utilizing Docker and Streamlit for containerization and interactive data visualization.</li>
+                        <li><strong>AutoML House Price Prediction</strong> <br>Implemented AutoML algorithms using H2O.ai and TPOT frameworks to predict house prices, enhancing the accuracy and efficiency of real estate valuation.</li>
+                    </ul>
+                </div>
+                <img src="projects-image.jpg" alt="Projects Image">
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Muthupalani R. All rights reserved.</p>
+    </footer>
+</body>
+</html>

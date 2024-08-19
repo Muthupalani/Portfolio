@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Muthupalani R</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .experience-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .experience-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .experience-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .experience-content {
+            flex: 1;
+        }
+
+        .experience-content h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .experience-content p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-picture">
+            <img src="muthu.jpg" alt="Profile Picture">
+        </div>
+        <h1>Muthupalani R - Experience</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="experience" class="section experience">
+            <div class="section-content">
+                <div class="experience-box">
+                    <div class="experience-image">
+                        <img src="experience1-image.jpg" alt="Intern at OCTANET">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Intern at OCTANET</h3>
+                        <p><strong>Duration:</strong> September 2023 – October 2023</p>
+                        <p>Gained experience in Python development, HTML, CSS, and database management. Worked on various projects, honing my skills in web development and data processing.</p>
+                    </div>
+                </div>
+                <div class="experience-box">
+                    <div class="experience-image">
+                        <img src="experience2-image.jpg" alt="Software Development Intern at TechCorp">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Software Development Intern at TechCorp</h3>
+                        <p><strong>Duration:</strong> June 2023 – August 2023</p>
+                        <p>Worked on developing and testing new software features. Gained hands-on experience in Java development and participated in Agile methodology practices.</p>
+                    </div>
+                </div>
+                <!-- Add more experience entries here -->
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Muthupalani R. All rights reserved.</p>
+    </footer>
+</body>
+</html>
