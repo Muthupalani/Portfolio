@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muthupalani R - Chatbot</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,15 +11,32 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
-            transition: background-color 0.5s ease-in-out;
+            background: radial-gradient(circle at 30% 50%, #270d3f, #140216, #1c021d);
+            color: white;
         }
 
         header {
-            background-color: #000;
+            background-color: transparent;
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative; /* Position relative for absolute elements */
+        }
+
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
         }
 
         h1 {
@@ -34,8 +50,8 @@
 
         .chatbot-section {
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             transition: transform 0.3s ease;
         }
@@ -47,9 +63,9 @@
         p {
             font-size: 1.2em;
             line-height: 1.6;
+            color: white;
         }
 
-        /* Chatbot icon at the bottom-right corner */
         .chatbot-icon {
             position: fixed;
             bottom: 20px;
@@ -58,7 +74,7 @@
             height: 60px;
             background-color: #6200ea;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,19 +86,30 @@
             height: 40px;
         }
 
+        footer {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Muthupalani R - Chatbot</h1>
+        <div class="profile-picture">
+            <img src="muthu.jpg" alt="Profile Picture"> <!-- Update with your profile image path -->
+        </div>
     </header>
     <div class="container">
         <section class="chatbot-section">
             <h2>Chatbot Project</h2>
             <p>This AI-powered chatbot is designed to provide detailed information about Muthupalani R, 
                 from professional expertise to personal interests. Whether you're curious about Muthupalani's skills, projects, 
-                or academic journey, just ask the chatbot!
-                It is trained to answer all your questions accurately and efficiently, offering a seamless interaction.</p>
+                or academic journey, just ask the chatbot! It is trained to answer all your questions accurately and efficiently, offering a seamless interaction.</p>
         </section>
     </div>
     <footer>
@@ -90,7 +117,6 @@
     </footer>
 
     <script>
-
         !function(w, d, s, ...args){
             var div = d.createElement('div');
             div.id = 'aichatbot';
