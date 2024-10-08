@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: radial-gradient(circle at 30% 50%, #270d3f, #140216, #1c021d); /* Gradient background */
-            color: white; /* Change text color to white for better contrast */
+            background: radial-gradient(circle at 30% 50%, #270d3f, #140216, #1c021d);
+            color: white;
+            height: 100vh;
+            overflow: hidden;
         }
 
         header {
@@ -76,6 +79,8 @@
 
         .container {
             padding: 20px;
+            height: calc(100vh - 160px);
+            overflow-y: auto;
         }
 
         .section {
@@ -83,28 +88,41 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better blending */
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 100%;
         }
 
         .section-content {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
 
         .project-box {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+            margin: 15px;
+            padding: 10px; /* Reduced padding */
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for projects */
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            width: 200px; /* Reduced width */
+            height: 250px; /* Reduced height */
+            cursor: pointer;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05);
         }
 
         .project-image {
-            width: 150px;
-            height: 150px;
-            margin-right: 20px;
+            width: 60px; /* Reduced image size */
+            height: 60px; /* Reduced image size */
+            margin-bottom: 10px;
             border-radius: 8px;
             overflow: hidden;
         }
@@ -115,18 +133,16 @@
             display: block;
         }
 
-        .project-content {
-            flex: 1;
-        }
-
         .project-content h3 {
-            margin-top: 0;
-            font-size: 1.5em;
+            margin: 0;
+            font-size: 1.1em; /* Adjusted font size */
+            text-align: center;
         }
 
-        .project-content p {
-            font-size: 1.1em;
-            margin: 5px 0;
+        .project-description {
+            font-size: 0.8em; /* Adjusted font size */
+            text-align: center;
+            margin-top: 5px; /* Adjusted spacing */
         }
 
         footer {
@@ -138,8 +154,44 @@
             bottom: 0;
             width: 100%;
         }
+
+        .more-projects {
+            margin-top: 40px;
+            font-size: 1.5em;
+            text-align: center;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 2s forwards; /* Animation to fade in */
+        }
+
+        .more-projects span {
+            display: inline-block;
+            opacity: 0; /* Initially hidden */
+            animation: slideIn 0.5s forwards; /* Animation to slide in */
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="profile-picture">
@@ -155,39 +207,81 @@
     <div class="container">
         <section id="projects" class="section projects">
             <div class="section-content">
-                <div class="project-box">
+                <div class="project-box" onclick="window.open('https://github.com/Muthupalani/movie-recommend-using-ml', '_blank')">
                     <div class="project-image">
-                        <img src="skin.jpeg" alt="AI-Based Tool for Preliminary Diagnosis">
+                        <img src="movie_recommendation_system.jpg" alt="Movie Recommendation System">
                     </div>
                     <div class="project-content">
-                        <h3>AI-Based Tool for Preliminary Diagnosis</h3>
-                        <p>Developed an AI-powered tool using Python, Django, and React to assist in the preliminary diagnosis of dermatological conditions.</p>
+                        <h3>Movie Recommendation System</h3>
+                        <p class="project-description">An AI-based tool to recommend movies based on user preferences.</p>
                     </div>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="window.open('https://github.com/Muthupalani/sign-language-detection-python', '_blank')">
                     <div class="project-image">
-                        <img src="mlops.jpeg" alt="MLOPS for Predictive Maintenance">
+                        <img src="sign_language_detection.jpg" alt="Sign Language Detection">
                     </div>
                     <div class="project-content">
-                        <h3>MLOPS for Predictive Maintenance</h3>
-                        <p>Led the MLOps implementation for wine quality prediction, utilizing Docker and Streamlit for containerization and interactive data visualization.</p>
+                        <h3>Sign Language Detection</h3>
+                        <p class="project-description">A real-time sign language detection system using computer vision.</p>
                     </div>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="window.open('https://github.com/Muthupalani/Chatbot-about-me', '_blank')">
                     <div class="project-image">
-                        <img src="hosueprice.jpg" alt="AutoML House Price Prediction">
+                        <img src="chatbot_about_me.jpg" alt="Chatbot About Me">
                     </div>
                     <div class="project-content">
-                        <h3>AutoML House Price Prediction</h3>
-                        <p>Implemented AutoML algorithms using H2O.ai and TPOT frameworks to predict house prices, enhancing the accuracy and efficiency of real estate valuation.</p>
+                        <h3>Chatbot About Me</h3>
+                        <p class="project-description">An interactive chatbot that knows everything about me.</p>
                     </div>
                 </div>
-                <!-- Add more projects here -->
+                <div class="project-box" onclick="window.open('https://github.com/Muthupalani/wine-quality-predictor', '_blank')">
+                    <div class="project-image">
+                        <img src="wine_quality_predictor.jpg" alt="Wine Quality Predictor">
+                    </div>
+                    <div class="project-content">
+                        <h3>Wine Quality Predictor</h3>
+                        <p class="project-description">Predicts wine quality based on various features using ML.</p>
+                    </div>
+                </div>
+                <div class="project-box" onclick="window.open('https://github.com/Muthupalani/house-price-prediction', '_blank')">
+                    <div class="project-image">
+                        <img src="house_price_prediction.jpg" alt="House Price Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>House Price Prediction</h3>
+                        <p class="project-description">Predicts house prices based on market data using regression.</p>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <p>
+                        <span class="word" style="animation-delay: 0s;">Explore</span>
+                        <span class="word" style="animation-delay: 0.2s;">a</span>
+                        <span class="word" style="animation-delay: 0.4s;">world</span>
+                        <span class="word" style="animation-delay: 0.6s;">of</span>
+                        <span class="word" style="animation-delay: 0.8s;">innovation</span>
+                        <span class="word" style="animation-delay: 1s;">and</span>
+                        <span class="word" style="animation-delay: 1.2s;">creativity!</span>
+                        <span class="word" style="animation-delay: 1.4s;">Check</span>
+                        <span class="word" style="animation-delay: 1.6s;">out</span>
+                        <span class="word" style="animation-delay: 1.8s;">my</span>
+                        <span class="word" style="animation-delay: 2s;">
+                            <a href="https://github.com/Muthupalani" target="_blank" style="color: #ffcc00; text-decoration: underline;">GitHub</a>
+                        </span>
+                        <span class="word" style="animation-delay: 2.2s;">repository</span>
+                        <span class="word" style="animation-delay: 2.4s;">for</span>
+                        <span class="word" style="animation-delay: 2.6s;">more</span>
+                        <span class="word" style="animation-delay: 2.8s;">exciting</span>
+                        <span class="word" style="animation-delay: 3s;">projects!</span>
+                    </p>
+                </div>
             </div>
+            </div>
+            
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Muthupalani R. All rights reserved.</p>
+        © 2024 Muthupalani R. All Rights Reserved.
     </footer>
 </body>
+
 </html>
